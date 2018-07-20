@@ -10,10 +10,9 @@ services:
       - 8888:8888
       - 9876:9876
     volumes:
-      - /tmp/party:/data
+      - /data/party:/data
       - ./config.ini:/data/config.ini
       - ./genesis.json:/data/genesis.json
-      - ./party:/bin/party
     logging:
       options:
         max-size: "1g"
