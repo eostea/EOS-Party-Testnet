@@ -28,3 +28,11 @@ Block Explorer: http://party.eosmonitor.io/
 ### Check log:
 
 `make logs`
+
+## P2P List:
+
+* p2p.party.eostea.io:56234
+
+## HTTP API List:
+
+* api.party.tc.ink:8765
