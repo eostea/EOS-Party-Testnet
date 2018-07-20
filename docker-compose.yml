@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+
+  nodeosd: &nodeosd_base
+    image: eosfans/party
+    command: nodeos -c /data/config.ini -d /data
+    hostname: nodeosd
+    ports:
+      - 8888:8888
+      - 9876:9876
+    volumes:
+      - /tmp/party:/data
+      - ./config.ini:/data/config.ini
+      - ./genesis.json:/data/genesis.json
+      - ./party:/bin/party
+    logging:
+      options:
+        max-size: "1g"
+        max-file: "10"
+
+  nodeosd_init:
+    <<: *nodeosd_base
+    command: nodeos -c /data/config.ini -d /data --genesis-json /data/genesis.json --delete-all-blocks
