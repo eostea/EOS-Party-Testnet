@@ -37,4 +37,4 @@ Block Explorer: http://party.eosmonitor.io/
 
 ## HTTP API List:
 
-* http://api.party.tc.ink:8765
+* http(s)://api.party.tc.ink
